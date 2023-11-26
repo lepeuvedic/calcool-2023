@@ -106,4 +106,20 @@ In the Natixar solution a data cube has only two dimensions: the __time__ and th
 
 For example, if the time dimension is chosen, emissions of all natures are summed and the result is a 2D curve of emissions over time. The time dimension has one particularity: it is one-dimensional and oriented, and therefore well suited to draw curves. If the nature dimension is chosen first, the result will be a bar chart with all known emissions gathered by nature, and aggregated at the desired level of the hierarchy. Assuming the top level is chosen, the bar chart will show the split of all emissions per scope. If a relative view is desired, a pie diagram will be used instead. The pie diagram shows the percentage each scope represents.
 
+### Advanced Plotting
+
 Any visual element, like a bar in a bar chart or a pie slice in a pie chart can be selected and further analyzed in the same fashion. A single visual element is a cut through the data cube, retaining only the elements having the corresponding value for some defined coordinate. Of course, the hierarchical nature of axes simplifies the selection of multiple related cuts, thereby defining the concept of a slice.
+
+A slice is simple a subset of the datacube, where only the data points belonging to a chosen section of the selected coordinate, are retained. The time dimension is ordered, and in this case the sections can be any time interval. If the geographic location is selected, it's intrinsic nature will yield charts based on map backgrounds. The other dimensions have a simple hierarchical structure and, in this case, a section means a branch of the hierarchy.
+
+The level of aggregation and the main dimension are chosen at the same time. Many chart elements can be subdivided using a lower level of aggregation or a different dimension. For instance, the columns in a bar chart can be broken down using a different dimension and aggregation.
+
+The behaviour is slightly different if the refinement uses the same dimension or another dimension. Starting from a bar chart showing the emissions per nature at scope level (top level, three bars), if a bar is refined using the same dimension, only this particular bar will be refined, because the other scopes have an unrelated hierarchical decomposition. If another dimension is selected, for instance years from the time dimension, the result will be a stacked bar chart with emissions for each year and scope.
+
+Refinements can be exported as linked charts. A linked chart reacts to the selection made by the user in the main chart, and displays only the selected data points according to its own settings.
+
+### Comparisons
+
+All the charts using time as the main dimension, or dependent upon a chart using time as its main dimension, can enable comparison with the previous period. If data is plotted for one year, the comparison will be with the previous year. If data is plotted for one month, it will be with the previous month.
+
+When the main dimension is time, additional curves are plotted for the reference period. In dependent bar charts, side-by-side bars are used to represent the current and the reference period.
