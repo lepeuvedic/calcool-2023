@@ -1,15 +1,13 @@
 ---
-title: Great self-conscious servers
-subtitle: Support sustainable farming while enjoying a cup
-image: img/barre-et-logo_v2_linkedin.jpg
+title: " "
+subtitle: " "
+image: img/logo-v3-pioneering-data-evolution.png
 blurb:
-  heading: Why CalCool Studios
-  text: CalCool Studios builds advanced small servers for AI, training of
-    foundational models and interactive visualization. Or servers do not require
-    a complex infrastructure. Relying on liquid cooling, they are silent enough
-    to operate in office space, and they are powerful enough to tackle large
-    problems. Finally we offer advanced networking for the users who need a
-    small cluster.
+  heading: "CalCool Studios: Solutions informatiques flexibles pour startups en
+    croissance."
+  text: Nous accompagnons les startups avec des infrastructures agiles, du conseil
+    technique et des technologies avancées (IA, blockchain, GPU), tout en
+    préparant un datacenter edge écoénergétique.
 intro:
   heading: What we offer
   text: Our CS6390 is available in a number of configurations and suits all the
@@ -17,7 +15,7 @@ intro:
     96 cores and hyperthreading. The core memory is 128 GB in the baseline
     configuration.
 products:
-  - image: img/illustrations-coffee.svg
+  - image: img/cs6390-clean.png
     text: We sell green and roasted coffee beans that are sourced directly from
       independent farmers and farm cooperatives. We’re proud to offer a variety
       of coffee beans grown with great care for the environment and local
