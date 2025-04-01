@@ -1,0 +1,10 @@
+# Empêcher les robots d'aller ailleurs que dans le contenu généré par Hugo.
+User-agent: AdsBot-Google-Mobile
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile-Apps
+User-agent: Googlebot
+User-agent: *
+Disallow: /
+{{ range .Pages }}
+Allow: {{ .RelPermalink }}
+{{ end }}

@@ -1,12 +1,145 @@
-baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Kaldi"
+baseurl = "https://calcoolstudios.com/"
+title = "CalCool Studios"
+
+# -------------------------
+# Languages
+
+defaultContentLanguage = 'fr'
+
+[languages]
+# Directives configurables par langue. La valeur globele est une valeur par défaut.
+# baseURL buildDrafts buildExpired buildFuture canonifyURLs capitalizeListTitles contentDir copyright disableAliases
+# disableHugoGeneratorInject disableKinds disableLiveReload disablePathToLower enableEmoji frontmatter hasCJKLanguage
+# languageCode mainSections markup mediaTypes menus outputFormats outputs page pagination params permalinks
+# pluralizeListTitles privacy refLinksErrorLevel refLinksNotFoundURL related relativeURLs removePathAccents
+# renderSegments sectionPagesMenu security services sitemap staticDir summaryLength taxonomies timeZone title
+# titleCaseStyle
+  [languages.fr]
+    disabled = false
+    # Ordre
+    weight = 0
+    languageCode = 'fr-FR'
+    languageDirection = 'ltr'
+    languageName = 'Français'
+
+disableLanguages = []
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy"]
 
+# -------------------------
+# Modules
+[module]
+  [[module.imports]]
+    path = 'github.com/dchucks/agnes-hugo-theme'
+
+# Doit etre placé après la déclaration du module
+theme = 'Agnes'
+
+# -------------------------
 [params]
-images = ["img/og-image.jpg"]
+  images = ["img/Logo v3-og-image-facebook.png"]
+  dateFormat = "1 avril 2025"
+  authorName = "CalCool Studios SAS"
+#  google_analytics_id = "GA-"
+
+# Home / Contacts / Products / Values
+[menu]
+  [[menu.main]]
+	Name = "Home"
+	URL = "#"
+	weight = 1
+
+  [[menu.main]]
+	Name = "Contact"
+	URL = "#"
+	weight = 2
+
+  [[menu.main]]
+	Name = "Produits"
+	URL = "#"
+	weight = 3
+
+  [[menu.main]]
+	Name = "Valeurs"
+	URL = "#"
+	weight = 4
+
+[params.social]
+	TwitterURL = "https://twitter.com/podbharati"
+	GoogleURL = "http://google.com"
+	FacebookURL = "https://facebook.com/podbharati"
+
+[params.content]
+	LeadTitle = "Landing template for Startups"
+	LeadDescription = "Our landing page template works for all the devices, so you only have to setup it once, and get beautiful results forever."
+	ButtonCaption = "Pricing & Plans"
+	ButtonURL = "http://google.com"
+
+################### Feature Columns (do not exceed 4) ####################
+
+[[params.feature]]
+	FeatureTitle = "Feature 1"
+	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureImage = "images/feature-1.png"
+
+[[params.feature]]
+	FeatureTitle = "Feature 2"
+	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureImage = "images/feature-2.png"
+
+[[params.feature]]
+	FeatureTitle = "Feature 3"
+	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureImage = "images/feature-3.png"
+
+[[params.feature]]
+	FeatureTitle = "Feature 4"
+	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureImage = "images/feature-4.png"
+
+################### Pricing Columns (do not exceed 3) ####################
+
+[[params.pricing]]
+	PricingTitle = "Starter"
+	PricingRate = "27"
+	ButtonCaption = "Get Early Access"
+ 	ButtonURL = "https://example.com/early-access.html"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+
+[[params.pricing]]
+	PricingTitle = "Professional"
+	PricingRate = "97"
+	ButtonCaption = "Get Earlier Access"
+ 	ButtonURL = "https://example.com/earlier-access.html"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+
+[[params.pricing]]
+	PricingTitle = "Business"
+	PricingRate = "147"
+	ButtonCaption = "Get Earliest Access"
+ 	ButtonURL = "https://example.com/earliest-access.html"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
+	[[params.pricing.Features]]
+		Description = "Lorem ipsum is common text"
