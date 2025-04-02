@@ -27,7 +27,7 @@ disableLanguages = []
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy"]
+disableKinds = ["RSS", "taxonomy", "term"]
 
 # -------------------------
 # Modules
@@ -46,100 +46,102 @@ theme = 'Agnes'
 #  google_analytics_id = "GA-"
 
 # Home / Contacts / Products / Values
+# Le menu se situe en bas à droite de la page Agnes.
 [menu]
   [[menu.main]]
-	Name = "Home"
-	URL = "#"
+	Name = "Accueil"
+	URL = "#top"
 	weight = 1
 
   [[menu.main]]
 	Name = "Contact"
-	URL = "#"
+	URL = "contact"
 	weight = 2
 
   [[menu.main]]
 	Name = "Produits"
-	URL = "#"
+	URL = "products"
 	weight = 3
 
   [[menu.main]]
 	Name = "Valeurs"
-	URL = "#"
+	URL = "values"
 	weight = 4
 
 [params.social]
-	TwitterURL = "https://twitter.com/podbharati"
+	TwitterURL = "https://twitter.com/"
 	GoogleURL = "http://google.com"
 	FacebookURL = "https://facebook.com/podbharati"
 
 [params.content]
-	LeadTitle = "Landing template for Startups"
+	LeadTitle = "CalCool Studios"
 	LeadDescription = "Our landing page template works for all the devices, so you only have to setup it once, and get beautiful results forever."
-	ButtonCaption = "Pricing & Plans"
-	ButtonURL = "http://google.com"
-
+	ButtonCaption = "Prix et packages"
+	ButtonURL = "#pricing"
 ################### Feature Columns (do not exceed 4) ####################
 
 [[params.feature]]
-	FeatureTitle = "Feature 1"
-	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureTitle = "Conseil et formation"
+	FeatureDescription = "Nous vous aidons à sélectionner les technologies les plus adaptées à votre projet, celles qui rendront le meilleur service et peuvent etre déployées au coût le plus bas. Nous nous assurons que vos équipes ont acquis le savoir-faire nécessaire pour opérer les services en toute sécurité au cours d'une transition graduelle."
 	FeatureImage = "images/feature-1.png"
 
 [[params.feature]]
-	FeatureTitle = "Feature 2"
-	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureTitle = "Coordination d'équipes"
+	FeatureDescription = "Grace à notre connaissance des outils et des meilleures pratiques, nous participons à la sélection de votre équipe de développeurs et coordonnons leurs travaux."
 	FeatureImage = "images/feature-2.png"
 
 [[params.feature]]
-	FeatureTitle = "Feature 3"
-	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureTitle = "Domaine et messagerie"
+	FeatureDescription = "Nous trouvons le meilleur prestataire pour votre nom de domaine et configurons le DNS pour faire fonctionner tous vos services. Nous proposons un service de messagerie (e-mail) sécurisé pour vos adresses professionnelles et les services qui interagissent par e-mail."
 	FeatureImage = "images/feature-3.png"
 
 [[params.feature]]
-	FeatureTitle = "Feature 4"
-	FeatureDescription = "A pseudo-Latin text used in web design, layout, and printing in place of English to emphasise design elements."
+	FeatureTitle = "Infrastructure"
+	FeatureDescription = "Nous pouvons vous héberger sur nos serveurs ou configurer vos services dans le cloud. Sur nos serveurs vous pourrez mettre en place des agents IA alimentés par de grands modèles de langage."
 	FeatureImage = "images/feature-4.png"
 
 ################### Pricing Columns (do not exceed 3) ####################
 
 [[params.pricing]]
-	PricingTitle = "Starter"
-	PricingRate = "27"
-	ButtonCaption = "Get Early Access"
- 	ButtonURL = "https://example.com/early-access.html"
+	PricingTitle = "Pour démarrer"
+	PricingRate = "499"
+	ButtonCaption = "En savoir plus"
+ 	ButtonURL = "consultations"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Un mois pour auditer vos moyens et comprendre vos besoins"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Une conférence audio par semaine"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Un rapport de recommandations avec un devis"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Une visite sur site en option"
 
 [[params.pricing]]
-	PricingTitle = "Professional"
+	PricingTitle = "Votre domaine"
 	PricingRate = "97"
-	ButtonCaption = "Get Earlier Access"
- 	ButtonURL = "https://example.com/earlier-access.html"
+	ButtonCaption = "En savoir plus"
+ 	ButtonURL = "domaine"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Nom de domaine à prix coûtant"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "20 adresses mail professionnelles sur votre domaine"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Un certificat SSL pour votre site web"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Déploiement automatique de votre site web"
 
 [[params.pricing]]
-	PricingTitle = "Business"
-	PricingRate = "147"
-	ButtonCaption = "Get Earliest Access"
- 	ButtonURL = "https://example.com/earliest-access.html"
+	PricingTitle = "Infrastructure"
+	PricingRate = "A partir de 20"
+	ButtonCaption = "En savoir plus"
+ 	ButtonURL = "infrastructure"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Gestion des identités et des rôles"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Hébergement de services back-end"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Hébergement d'environnements de développement"
 	[[params.pricing.Features]]
-		Description = "Lorem ipsum is common text"
+		Description = "Accès à un noeud de blockchain"
+	[[params.pricing.Features]]
+		Description = "Accès à un modèle IA local"
