@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- Override lang="en" in the theme base layout -->
+<html lang="fr">
+	{{ partial "head.html" . }}
+	<body class="is-boxed has-animations">
+		<div class="body-wrap boxed-container">
+		{{ partial "header.html" . }}
+			<main>
+				{{ block "main" . }}{{ end }}
+			</main>
+		{{ partial "footer.html" . }}
+		</div>
+		{{ partial "script.html" . }}
+	</body>
+</html>
