@@ -68,6 +68,10 @@ theme = 'Agnes'
 	URL = "values"
 	weight = 4
 
+  [[menu.main]]
+    Name = "CGV"
+    URL = "files/CGV_B2B.pdf"
+
 [params.social]
 	TwitterURL = "https://twitter.com/"
 	GoogleURL = "http://google.com"
