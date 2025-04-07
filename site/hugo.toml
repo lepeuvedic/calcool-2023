@@ -59,13 +59,13 @@ theme = 'Agnes'
 	weight = 2
 
   [[menu.main]]
-	Name = "Produits"
-	URL = "products"
+	Name = "Portail"
+	URL = "portal/?db=critical"
 	weight = 3
 
   [[menu.main]]
-	Name = "Valeurs"
-	URL = "values"
+	Name = "Webmail"
+	URL = "mail/"
 	weight = 4
 
   [[menu.main]]
@@ -79,7 +79,7 @@ theme = 'Agnes'
 
 [params.content]
 	LeadTitle = "CalCool Studios"
-	LeadDescription = "Our landing page template works for all the devices, so you only have to setup it once, and get beautiful results forever."
+	LeadDescription = "Pioneering data evolution"
 	ButtonCaption = "Prix et packages"
 	ButtonURL = "#pricing"
 ################### Feature Columns (do not exceed 4) ####################
